@@ -1,0 +1,29 @@
+<html>
+<html>
+<head>
+</head>
+
+<body>
+ <div class="multiply">
+	<h1>Calculate product marks</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('multiply')}}" method="post">
+    	<input type="int" name="n" placeholder="number 1" required="required" />
+        <input type="int" name="m" placeholder="number 2" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Multiply Button</button>
+    </form>
+
+   <br>
+   <br>
+ </div>
+<h1> The result is {{answer}} </h1>
+
+</body>
+</html>
+
+
+
+
+</html>

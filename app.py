@@ -42,6 +42,22 @@ def calculate():
         
         return redirect(url_for(result, score = average_marks))
         #return render_template('results.html', results = average_marks)
+    
+@app.route('/multiply', methods=['POST', 'GET'])
+def multiply():
+    if request.method == 'GET':
+        return render_template('multiply.html')
+    else:
+        n = float(request.form['n'])
+        m = float(request.form['m'])
+
+        answer = n * m
+        
+    return render_template('multiply.html', answer = answer)
+        
+
+
+
 
 
 if __name__ == '__main__':
